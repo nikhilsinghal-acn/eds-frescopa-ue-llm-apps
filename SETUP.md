@@ -34,7 +34,7 @@ Fréscopa does not publish a content package. The pages, products and café list
    - Project URL: `https://main--eds-frescopa-ue-llm-apps--nikhilsinghal-acn.aem.page`
 4. Open Tools, Cloud Services, Edge Delivery Services Configuration for the new site. On the Authentication tab, copy the technical account.
 5. In [AEM user admin](https://tools.aem.live/tools/user-admin/index.html), add your own user as an admin first, then add the technical account as a config admin.
-6. In `config.json` in this repository, replace `aem.author` and `aem.publish` with this program's author and publish hostnames. The values there today are Adobe's public demo.
+6. `fstab.yaml`, `config.json` and `head.html` already point at `author-p11300-e47725`. The publish host is `publish-p11300-e47725`. Leave the earlier Edge Delivery site in Code Sync, and add this repository beside it. One author can serve both sites. Each site has its own content bus.
 7. Open `/content/frescopa` in the Sites console, edit the home page in Universal Editor, and publish it to Preview. Confirm `https://main--eds-frescopa-ue-llm-apps--nikhilsinghal-acn.aem.page` loads.
 8. Create a page named `find-a-cafe`. Add one Store Locator block. Set the headline to "Find a Fréscopa café", the search placeholder to "City or postcode", and the button to "Search". Publish it to Preview and then Live.
 
