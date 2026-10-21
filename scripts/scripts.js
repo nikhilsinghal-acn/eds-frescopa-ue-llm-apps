@@ -540,7 +540,8 @@ export async function loadPage() {
   loadDelayed();
 }
 
-loadPage();
+window.hlx = window.hlx || {};
+if (!window.hlx.suppressLoadPage) loadPage();
 
 (function da() {
   const { searchParams } = new URL(window.location.href);
